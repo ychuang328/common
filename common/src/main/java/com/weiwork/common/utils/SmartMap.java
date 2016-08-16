@@ -13,7 +13,7 @@ import java.util.List;
  * 从数据库中查询出对象后直接得到具体的类型
  * <p>
  * @author   杨闯
- * @Date	 2015-10-11 	 
+ * @Date	 2015-10-10 	 
  */
 @SuppressWarnings("unchecked")
 public class SmartMap<K, V> extends LinkedHashMap<K, V> {
