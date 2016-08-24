@@ -24,6 +24,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * http调用封装
+ * 基于apache的HttpClient-4.2.1的二次封装，以至于对外提供简化的HTTP请求
  */
 public final class HttpUtil {
 
@@ -111,9 +112,11 @@ public final class HttpUtil {
 
 	/**
 	 * 任何异常，调用方需自行处理
-	 * 
+	 * <p>
+	 * 依赖java.net包下的HttpURLConnection,来模拟post表单提交
+	 * </p>
 	 * @param url post地址
-	 * @param param 请求参数
+	 * @param param 请求参数， 例如"name=daodao&age=500"
 	 * @return 正常响应
 	 * @throws Exception 自行处理
 	 */
@@ -187,5 +190,4 @@ public final class HttpUtil {
 		}
 		return "";
 	}
-
 }
